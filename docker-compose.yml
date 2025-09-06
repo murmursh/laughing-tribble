@@ -73,6 +73,9 @@ services:
       - 8557:8557
     networks:
       - remnawave-network
+    depends_on:
+      remnawave:
+        condition: service_healthy
 
 networks:
   remnawave-network:
