@@ -65,7 +65,6 @@ services:
   nginx:
     image: nginx
     container_name: remnawave-nginx
-    network_mode: remnawave-nginx
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - /etc/ssl/private/tscert.crt:/etc/nginx/ssl/fullchain.pem:ro
