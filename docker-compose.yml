@@ -30,7 +30,7 @@ services:
     restart: always
     # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
     ports:
-      - '127.0.0.1:8555:8555'
+      - '8555:8555'
     env_file:
       - .env
     networks:
@@ -62,20 +62,20 @@ services:
       timeout: 10s
       retries: 3
 
-  nginx:
-    image: nginx
-    container_name: remnawave-nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - /etc/ssl/private/tscert.crt:/etc/nginx/ssl/fullchain.pem:ro
-      - /etc/ssl/private/tscert.key:/etc/nginx/ssl/privkey.key:ro
-    ports:
-      - 8557:8557
-    networks:
-      - remnawave-network
-    depends_on:
-      remnawave:
-        condition: service_healthy
+  # nginx:
+  #   image: nginx
+  #   container_name: remnawave-nginx
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  #     - /etc/ssl/private/tscert.crt:/etc/nginx/ssl/fullchain.pem:ro
+  #     - /etc/ssl/private/tscert.key:/etc/nginx/ssl/privkey.key:ro
+  #   ports:
+  #     - 8557:8557
+  #   networks:
+  #     - remnawave-network
+  #   depends_on:
+  #     remnawave:
+  #       condition: service_healthy
 
 networks:
   remnawave-network:
