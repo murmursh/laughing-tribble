@@ -11,7 +11,7 @@ entryPoints:
 providers:
   docker:
     endpoint: "unix:///var/run/docker.sock"
-    defaultRule: 'Host(`{{env "TS_TAILNET"}}`)'
+    defaultRule: 'Host(`{{env "TS_HOSTNAME"}}.{{env "TS_TAILNET"}}`)'
     exposedByDefault: true
     watch: true
 

@@ -41,7 +41,7 @@ services:
   ts-traefik:
     image: tailscale/tailscale:latest
     container_name: test-ts-traefik
-    hostname: ${TS_NAME}
+    hostname: ${TS_HOSTNAME}
     environment:
       - TS_AUTHKEY=${TS_AUTHKEY}
       - TS_STATE_DIR=/var/lib/tailscale
@@ -79,8 +79,8 @@ services:
       - traefik.http.routers.traefik_https.service=api@internal
       - traefik.http.routers.traefik_https.tls=true
       - traefik.http.routers.traefik_https.tls.certresolver=myresolver
-      - traefik.http.routers.traefik_https.tls.domains[0].main=${TS_NAME}.${TS_TAILNET}
-      - traefik.http.services.${TS_NAME}.loadbalancer.server.port=443
+      - traefik.http.routers.traefik_https.tls.domains[0].main=${TS_HOSTNAME}.${TS_TAILNET}
+      - traefik.http.services.${TS_HOSTNAME}.loadbalancer.server.port=443
 
   remnawave:
     image: remnawave/backend:2
@@ -109,7 +109,7 @@ services:
         condition: service_started
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.remnawave_https.rule=Host(`remnawave.${TS_NAME}.${TS_TAILNET}`)"
+      - "traefik.http.routers.remnawave_https.rule=Host(`${TS_HOSTNAME}.${TS_TAILNET}`)"
       - "traefik.http.routers.remnawave_https.entrypoints=https"
       - "traefik.http.routers.remnawave_https.service=remnawave"
       - "traefik.http.routers.remnawave_https.tls=true"
