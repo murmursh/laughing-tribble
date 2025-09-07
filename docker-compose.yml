@@ -30,7 +30,7 @@ services:
     restart: always
     # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
     ports:
-      - '8555:8555'
+      - '127.0.0.1:3000:3000'
     env_file:
       - .env
     networks:
