@@ -1,0 +1,31 @@
+api:
+ dashboard: true
+
+entryPoints:
+  http:
+    address: ":80"
+
+  https:
+    address: ":443"
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    defaultRule: 'Host(`{{env "TS_TAILNET"}}`)'
+    exposedByDefault: true
+    watch: true
+
+certificatesResolvers:
+    myresolver:
+        tailscale: {}
+
+accessLog:
+  filePath: "/logs/access.log"
+  fields:
+    headers:
+      names:
+        User-Agent: "keep"
+
+log:
+  filePath: "/logs/traefik.log"
+  level: "INFO"
