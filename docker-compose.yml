@@ -23,30 +23,6 @@ services:
       timeout: 10s
       retries: 3
 
-  remnawave:
-    image: remnawave/backend:2
-    container_name: 'remnawave'
-    hostname: remnawave
-    restart: always
-    # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
-    ports:
-      - '3000'
-    env_file:
-      - .env
-    networks:
-      - remnawave-network
-    healthcheck:
-      test: ['CMD-SHELL', 'curl -f http://localhost:${METRICS_PORT:-3001}/health']
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 30s
-    depends_on:
-      remnawave-db:
-        condition: service_healthy
-      remnawave-redis:
-        condition: service_healthy
-
   remnawave-redis:
     image: valkey/valkey:8.1-alpine
     container_name: remnawave-redis
@@ -81,10 +57,6 @@ services:
       - sys_module
     networks:
       - remnawave-network
-    depends_on:
-      remnawave:
-        condition: service_healthy
-
     restart: unless-stopped
 
   traefik:
@@ -110,6 +82,40 @@ services:
       - traefik.http.routers.traefik_https.tls.domains[0].main=${TS_NAME}.${TS_TAILNET}
       - traefik.http.services.${TS_NAME}.loadbalancer.server.port=443
 
+  remnawave:
+    image: remnawave/backend:2
+    container_name: 'remnawave'
+    hostname: remnawave
+    restart: always
+    # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
+    ports:
+      - '3000'
+    env_file:
+      - .env
+    networks:
+      - remnawave-network
+    healthcheck:
+      test: ['CMD-SHELL', 'curl -f http://localhost:${METRICS_PORT:-3001}/health']
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    depends_on:
+      remnawave-db:
+        condition: service_healthy
+      remnawave-redis:
+        condition: service_healthy
+      traefik:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.remnawave_https.rule=Host(`remnawave.${TS_NAME}.${TS_TAILNET}`)"
+      - "traefik.http.routers.remnawave_https.entrypoints=https"
+      - "traefik.http.routers.remnawave_https.service=remnawave"
+      - "traefik.http.routers.remnawave_https.tls=true"
+      - "traefik.http.routers.remnawave_https.tls.certresolver=myresolver"
+      - "traefik.http.services.remnawave.loadbalancer.server.port=3000"
+      
 
 networks:
   remnawave-network:
