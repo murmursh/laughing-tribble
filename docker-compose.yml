@@ -71,6 +71,7 @@ services:
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
       - TS_SOCKET=/var/run/tailscale/tailscaled.sock
+      --advertise-tags=test
     volumes:
       - ./tailscale/data:/var/lib/tailscale:rw
       - ./tailscale:/var/run/tailscale
