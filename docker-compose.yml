@@ -119,10 +119,9 @@ services:
   remnawave-subscription-page:
     image: remnawave/subscription-page:latest
     container_name: remnawave-subscription-page
-    hostname: remnawave-subscription-page
     restart: always
     environment:
-        - REMNAWAVE_PANEL_URL=http://remnawave:3000
+        - REMNAWAVE_PANEL_URL=https://{TS_HOSTNAME}.${TS_TAILNET}
         - APP_PORT=3010
         - META_TITLE="Subscription Page Title"
         - META_DESCRIPTION="Subscription Page Description"
