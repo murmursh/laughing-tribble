@@ -22,7 +22,6 @@ services:
       - "80:80"
     environment:
       - DOMAIN=${DOMAIN}
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     entrypoint: /entrypoint.sh
     depends_on:
       - cloudflare-ddns
