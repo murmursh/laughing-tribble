@@ -130,7 +130,8 @@ services:
         - '3010'
     networks:
         - remnawave-network
-
+    labels:
+      - "traefik.enable=false"
 networks:
   remnawave-network:
     name: remnawave-network
