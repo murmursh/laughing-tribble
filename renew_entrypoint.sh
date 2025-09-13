@@ -38,7 +38,7 @@ if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
   certbot certonly \
     --standalone \
     -d "$DOMAIN" \
-    --email "$LETSENCRYPT_EMAIL" \
+    --email "test@$DOMAIN" \
     --agree-tos \
     --non-interactive \
     --http-01-port 80 \
