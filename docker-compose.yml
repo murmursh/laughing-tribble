@@ -115,7 +115,21 @@ services:
       - "traefik.http.routers.remnawave_https.tls=true"
       - "traefik.http.routers.remnawave_https.tls.certresolver=myresolver"
       - "traefik.http.services.remnawave.loadbalancer.server.port=3000"
-      
+
+  remnawave-subscription-page:
+    image: remnawave/subscription-page:latest
+    container_name: remnawave-subscription-page
+    hostname: remnawave-subscription-page
+    restart: always
+    environment:
+        - REMNAWAVE_PANEL_URL=http://remnawave:3000
+        - APP_PORT=3010
+        - META_TITLE="Subscription Page Title"
+        - META_DESCRIPTION="Subscription Page Description"
+    ports:
+        - '3010'
+    networks:
+        - remnawave-network
 
 networks:
   remnawave-network:
