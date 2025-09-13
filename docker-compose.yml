@@ -127,7 +127,7 @@ services:
         - META_TITLE="Subscription Page Title"
         - META_DESCRIPTION="Subscription Page Description"
     ports:
-        - '3010'
+        - '127.0.0.1:3010:3010'
     networks:
         - remnawave-network
     labels:
