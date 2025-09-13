@@ -128,8 +128,7 @@ services:
         - META_DESCRIPTION="Subscription Page Description"
     ports:
         - '127.0.0.1:3010:3010'
-    networks:
-        - remnawave-network
+    network_mode: service:ts-traefik
     labels:
       - "traefik.enable=false"
 networks:
