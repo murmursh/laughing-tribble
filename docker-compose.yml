@@ -16,8 +16,10 @@ services:
     restart: unless-stopped
     volumes:
       # Mount the certs volume to store certificates
-      - cert_data:/etc/letsencrypt
+      - ./cert_data:/etc/letsencrypt
       - ./renew_entrypoint.sh:/entrypoint.sh
+    env_file:
+      - .env
     ports:
       - "80:80"
     environment:
@@ -27,21 +29,24 @@ services:
       - cloudflare-ddns
     healthcheck:
       test: ["CMD-SHELL", "test -f /etc/letsencrypt/live/${DOMAIN}/privkey.pem || exit 1"]
-      interval: 500ms
+      interval: 1s
       timeout: 5s
       retries: 3
+      start_period: 600s
 
   remnawave-nginx:
     image: nginx:1.28
     container_name: remnawave-nginx
     hostname: remnawave-nginx
     restart: always
+    env_file:
+      - .env
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - cert_data/live/${DOMAIN}/fullchain.pem:/etc/nginx/ssl/${DOMAIN}/fullchain.pem:ro
-      - cert_data/live/${DOMAIN}/privkey.pem:/etc/nginx/ssl/${DOMAIN}/privkey.pem:ro
+      - ./cert_data/live/${DOMAIN}/fullchain.pem:/etc/nginx/ssl/${DOMAIN}/fullchain.pem:ro
+      - ./cert_data/live/${DOMAIN}/privkey.pem:/etc/nginx/ssl/${DOMAIN}/privkey.pem:ro
       - /dev/shm:/dev/shm:rw
-      - site:/var/www/html:ro
+      - ./site:/var/www/html:ro
     command: sh -c 'rm -f /dev/shm/nginx.sock && nginx -g "daemon off;"'
     logging:
       driver: 'json-file'
@@ -80,13 +85,12 @@ services:
   remnanode:
     image: remnawave/node:latest
     container_name: remnanode
-    hostname: remnanode
     restart: always
-    network_mode: service.ts
+    network_mode: service:ts
     depends_on:
       - ts
     env_file:
-      - .env-node
+      - .env
     volumes:
       - /dev/shm:/dev/shm:rw
     logging:
