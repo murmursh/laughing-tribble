@@ -57,7 +57,7 @@ services:
   ts:
     image: tailscale/tailscale:latest
     container_name: ts
-    hostname: ts-gateway
+    hostname: ${DOMAIN}
     env_file:
       - .env
     environment:
