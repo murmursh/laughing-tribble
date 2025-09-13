@@ -82,7 +82,7 @@ services:
     container_name: remnanode
     hostname: remnanode
     restart: always
-    network-mode: service.ts
+    network_mode: service.ts
     depends_on:
       - ts
     env_file:
