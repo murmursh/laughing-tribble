@@ -38,50 +38,6 @@ services:
       timeout: 10s
       retries: 3
 
-  ts-traefik:
-    image: tailscale/tailscale:latest
-    container_name: test-ts-traefik
-    hostname: ${TS_HOSTNAME}
-    environment:
-      - TS_AUTHKEY=${TS_AUTHKEY}
-      - TS_STATE_DIR=/var/lib/tailscale
-      - TS_USERSPACE=false
-      - TS_SOCKET=/var/run/tailscale/tailscaled.sock
-      - TS_EXTRA_ARGS=--advertise-tags=tag:container
-    volumes:
-      - ./tailscale/data:/var/lib/tailscale:rw
-      - ./tailscale:/var/run/tailscale
-      - /dev/net/tun:/dev/net/tun
-    cap_add:
-      - net_admin
-      - sys_module
-    networks:
-      - remnawave-network
-    restart: unless-stopped
-
-  traefik:
-    image: traefik:latest
-    container_name: test-traefik
-    network_mode: service:ts-traefik
-    depends_on:
-      - ts-traefik
-    volumes:
-      - ./traefik.yml:/traefik.yml:ro
-      - ./traefik/logs:/logs:rw
-      # Access to Docker socket for provider, discovery.
-      - /var/run/docker.sock:/var/run/docker.sock
-      # Access to Tailscale files for cert generation.
-      - ./tailscale/data:/var/lib/tailscale:rw
-      # Access to Tailscale socket for cert generation.
-      - ./tailscale:/var/run/tailscale
-    labels:
-      - traefik.http.routers.traefik_https.entrypoints=https
-      - traefik.http.routers.traefik_https.service=api@internal
-      - traefik.http.routers.traefik_https.tls=true
-      - traefik.http.routers.traefik_https.tls.certresolver=myresolver
-      - traefik.http.routers.traefik_https.tls.domains[0].main=${TS_HOSTNAME}.${TS_TAILNET}
-      - traefik.http.services.${TS_HOSTNAME}.loadbalancer.server.port=443
-
   remnawave:
     image: remnawave/backend:2
     container_name: 'remnawave'
@@ -105,29 +61,18 @@ services:
         condition: service_healthy
       remnawave-redis:
         condition: service_healthy
-      traefik:
-        condition: service_started
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.remnawave_https.rule=Host(`${TS_HOSTNAME}.${TS_TAILNET}`)"
-      - "traefik.http.routers.remnawave_https.entrypoints=https"
-      - "traefik.http.routers.remnawave_https.service=remnawave"
-      - "traefik.http.routers.remnawave_https.tls=true"
-      - "traefik.http.routers.remnawave_https.tls.certresolver=myresolver"
-      - "traefik.http.services.remnawave.loadbalancer.server.port=3000"
 
   remnawave-subscription-page:
     image: remnawave/subscription-page:latest
     container_name: remnawave-subscription-page
     restart: always
     environment:
-        - REMNAWAVE_PANEL_URL=https://${TS_HOSTNAME}.${TS_TAILNET}
+        - REMNAWAVE_PANEL_URL=http://remnawave
         - APP_PORT=3010
         - META_TITLE="Subscription Page Title"
         - META_DESCRIPTION="Subscription Page Description"
-    network_mode: service:ts-traefik
-    labels:
-      - "traefik.enable=false"
+    networks:
+      - remnawave-network
 networks:
   remnawave-network:
     name: remnawave-network
