@@ -44,8 +44,6 @@ services:
     hostname: remnawave
     restart: always
     # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
-    ports:
-      - '3000'
     env_file:
       - .env
     networks:
