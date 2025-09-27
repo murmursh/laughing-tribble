@@ -43,7 +43,6 @@ services:
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
-    # command: [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "development" ]
     env_file:
       - .env
     networks:
@@ -65,12 +64,13 @@ services:
     container_name: remnawave-subscription-page
     restart: always
     environment:
-        - REMNAWAVE_PANEL_URL=http://remnawave
+        - REMNAWAVE_PANEL_URL=http://remnawave:3000
         - APP_PORT=3010
         - META_TITLE="Subscription Page Title"
         - META_DESCRIPTION="Subscription Page Description"
     networks:
       - remnawave-network
+
 networks:
   remnawave-network:
     name: remnawave-network
