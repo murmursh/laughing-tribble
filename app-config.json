@@ -1,0 +1,236 @@
+{
+  "config": {
+    "additionalLocales": [
+      "ru"
+    ],
+    "branding": {
+      "name": "Subscription",
+      "logoUrl": "https://remna.st/img/logo.svg",
+      "supportUrl": "https://t.me/murmurshik"
+    }
+  },
+  "platforms": {
+    "android": [
+      {
+        "id": "happ",
+        "name": "Happ",
+        "isFeatured": true,
+        "urlScheme": "happ://add/",
+        "installationStep": {
+          "buttons": [
+            {
+              "buttonLink": "https://play.google.com/store/apps/details?id=com.happproxy",
+              "buttonText": {
+                "en": "Open in Google Play",
+                "ru": "Открыть в Google Play"
+              }
+            },
+            {
+              "buttonLink": "https://github.com/Happ-proxy/happ-android/releases/latest/download/Happ.apk",
+              "buttonText": {
+                "en": "Download APK",
+                "ru": "Скачать APK"
+              }
+            }
+          ],
+          "description": {
+            "en": "Open the page in Google Play and install the app. Or install the app directly from the APK file if Google Play is not working.",
+            "ru": "Откройте страницу в Google Play и установите приложение. Или установите приложение из APK файла напрямую, если Google Play не работает."
+          }
+        },
+        "addSubscriptionStep": {
+          "description": {
+            "en": "Click the button below to add subscription",
+            "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
+          }
+        },
+        "connectAndUseStep": {
+          "description": {
+            "en": "Open the app and connect to the server",
+            "ru": "Откройте приложение и подключитесь к серверу"
+          }
+        },
+        "additionalAfterAddSubscriptionStep": {
+          "title": {
+            "en": "Add routing rules to chose from",
+            "ru": "Добавь правила маршрутизации"
+          },
+          "description": {
+            "en": "Here you can configure which traffic will go through the VPN.\n\nHow to manage profiles:\n\n - To add a new rule: Click the buttons below.\n\n - To change the active profile: Go to Settings -> Routing -> Profiles.\n\nProfile descriptions:\n\n - 'All requests' Directs all your internet traffic through the VPN.\n\n - 'Blocked only' Uses the VPN only to open blocked sites.\n\n - 'All, except RU' (Default) Directs all traffic through the VPN, except for requests to Russian resources.",
+            "ru": "Здесь вы можете настроить, какой трафик будет проходить через VPN.\n\nКак управлять профилями:\n\n - Чтобы добавить новое правило: Нажмите на кнопки ниже.\n\n - Чтобы изменить активный профиль: Перейдите в Настройки -> Маршрутизация -> Профили.\n\nОписание профилей:\n\n - 'Все запросы' Направляет весь ваш интернет-трафик через VPN.\n\n - 'Только заблокированные' Использует VPN только для открытия заблокированных сайтов.\n\n - 'Все, кроме РФ' (По умолчанию) Направляет через VPN весь трафик, кроме запросов к российским ресурсам."
+          },
+          "buttons": [
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQnlwYXNzIFJ1c3NpYSAjOTU1NSIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIlJlbW90ZUROU1R5cGUiOiJEb0giLCJSZW1vdGVETlNEb21haW4iOiJodHRwczovLzEuMS4xLjEvZG5zLXF1ZXJ5IiwiUmVtb3RlRE5TSVAiOiIxLjEuMS4xIiwiRG9tZXN0aWNETlNUeXBlIjoiRG9IIiwiRG9tZXN0aWNETlNEb21haW4iOiJodHRwczovLzguOC44LjgvZG5zLXF1ZXJ5IiwiRG9tZXN0aWNETlNJUCI6IjguOC44LjgiLCJHZW9pcHVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9zaXRlLmRhdCIsIkxhc3RVcGRhdGVkIjoiIiwiRG5zSG9zdHMiOnsiMS4xLjEuMSI6IjEuMS4xLjEiLCI4LjguOC44IjoiOC44LjguOCJ9LCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1Il0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCJnZW9pcDpydSIsIjEwMC4xMDAuMC4wLzI0IiwiMTAwLjEwMC4xMDAuMC8yNCIsIjEwMC4xMTUuOTIuMC8yMyJdLCJQcm94eVNpdGVzIjpbXSwiUHJveHlJcCI6W10sIkJsb2NrU2l0ZXMiOltdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJJUElmTm9uTWF0Y2giLCJGYWtlRE5TIjoiZmFsc2UiLCJVc2VDaHVua0ZpbGVzIjoidHJ1ZSJ9",
+              "buttonText": {
+                "en": "Bypass Russia(default)",
+                "ru": "Все, кроме РФ(по умолчанию)"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiVW5ibG9jayAjOTU1NSIsIkdsb2JhbFByb3h5IjoiZmFsc2UiLCJSZW1vdGVETlNUeXBlIjoiRG9IIiwiUmVtb3RlRE5TRG9tYWluIjoiaHR0cHM6Ly8xLjEuMS4xL2Rucy1xdWVyeSIsIlJlbW90ZUROU0lQIjoiMS4xLjEuMSIsIkRvbWVzdGljRE5TVHlwZSI6IkRvSCIsIkRvbWVzdGljRE5TRG9tYWluIjoiaHR0cHM6Ly84LjguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI4LjguOC44IiwiR2VvaXB1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9pcC5kYXQiLCJHZW9zaXRldXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2Vvc2l0ZS5kYXQiLCJMYXN0VXBkYXRlZCI6IiIsIkRuc0hvc3RzIjp7IjEuMS4xLjEiOiIxLjEuMS4xIiwiOC44LjguOCI6IjguOC44LjgifSwiRGlyZWN0U2l0ZXMiOlsiZ2Vvc2l0ZTpwcml2YXRlIl0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCIxMDAuMTAwLjAuMC8yNCIsIjEwMC4xMDAuMTAwLjAvMjQiLCIxMDAuMTE1LjkyLjAvMjMiXSwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnJ1LWJsb2NrZWQiLCJnZW9zaXRlOnRpa3RvayIsImdlb3NpdGU6ZGlzY29yZCIsImdlb3NpdGU6Y2F0ZWdvcnktYWktIWNuIl0sIlByb3h5SXAiOlsiZ2VvaXA6cnUtYmxvY2tlZC1jb21tdW5pdHkiLCJnZW9pcDpyZS1maWx0ZXIiXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "Unblock only",
+                "ru": "Только заблокированные"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQWxsICM5NTU1IiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vMS4xLjEuMS9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjEuMS4xLjEiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJEb21lc3RpY0ROU0lQIjoiOC44LjguOCIsIkdlb2lwdXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb3NpdGUuZGF0IiwiTGFzdFVwZGF0ZWQiOiIiLCJEbnNIb3N0cyI6eyIxLjEuMS4xIjoiMS4xLjEuMSIsIjguOC44LjgiOiI4LjguOC44In0sIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiMTAwLjEwMC4wLjAvMjQiLCIxMDAuMTAwLjEwMC4wLzI0IiwiMTAwLjExNS45Mi4wLzIzIl0sIlByb3h5U2l0ZXMiOltdLCJQcm94eUlwIjpbXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "All requests",
+                "ru": "Все запросы"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ios": [
+      {
+        "id": "happ",
+        "name": "Happ",
+        "isFeatured": true,
+        "urlScheme": "happ://add/",
+        "installationStep": {
+          "buttons": [
+            {
+              "buttonLink": "https://apps.apple.com/us/app/happ-proxy-utility/id6504287215",
+              "buttonText": {
+                "en": "Open in App Store [EU]",
+                "ru": "Открыть в App Store [EU]"
+              }
+            },
+            {
+              "buttonLink": "https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973",
+              "buttonText": {
+                "en": "Open in App Store [RU]",
+                "ru": "Открыть в App Store [RU]"
+              }
+            }
+          ],
+          "description": {
+            "en": "Open the page in App Store and install the app. Launch it, in the VPN configuration permission window click Allow and enter your passcode.",
+            "ru": "Откройте страницу в App Store и установите приложение. Запустите его, в окне разрешения VPN-конфигурации нажмите Allow и введите свой пароль."
+          }
+        },
+        "addSubscriptionStep": {
+          "description": {
+            "en": "Click the button below — the app will open and the subscription will be added automatically",
+            "ru": "Нажмите кнопку ниже — приложение откроется, и подписка добавится автоматически."
+          }
+        },
+        "connectAndUseStep": {
+          "description": {
+            "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, choose another server from the server list.",
+            "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
+          }
+        },
+        "additionalAfterAddSubscriptionStep": {
+          "title": {
+            "en": "Add routing rules to chose from",
+            "ru": "Добавь правила маршрутизации"
+          },
+          "description": {
+            "en": "Here you can configure which traffic will go through the VPN.\n\nHow to manage profiles:\n\n - To add a new rule: Click the buttons below.\n\n - To change the active profile: Go to Settings -> Routing -> Profiles.\n\nProfile descriptions:\n\n - 'All requests' Directs all your internet traffic through the VPN.\n\n - 'Blocked only' Uses the VPN only to open blocked sites.\n\n - 'All, except RU' (Default) Directs all traffic through the VPN, except for requests to Russian resources.",
+            "ru": "Здесь вы можете настроить, какой трафик будет проходить через VPN.\n\nКак управлять профилями:\n\n - Чтобы добавить новое правило: Нажмите на кнопки ниже.\n\n - Чтобы изменить активный профиль: Перейдите в Настройки -> Маршрутизация -> Профили.\n\nОписание профилей:\n\n - 'Все запросы' Направляет весь ваш интернет-трафик через VPN.\n\n - 'Только заблокированные' Использует VPN только для открытия заблокированных сайтов.\n\n - 'Все, кроме РФ' (По умолчанию) Направляет через VPN весь трафик, кроме запросов к российским ресурсам."
+          },
+          "buttons": [
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQnlwYXNzIFJ1c3NpYSAjOTU1NSIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIlJlbW90ZUROU1R5cGUiOiJEb0giLCJSZW1vdGVETlNEb21haW4iOiJodHRwczovLzEuMS4xLjEvZG5zLXF1ZXJ5IiwiUmVtb3RlRE5TSVAiOiIxLjEuMS4xIiwiRG9tZXN0aWNETlNUeXBlIjoiRG9IIiwiRG9tZXN0aWNETlNEb21haW4iOiJodHRwczovLzguOC44LjgvZG5zLXF1ZXJ5IiwiRG9tZXN0aWNETlNJUCI6IjguOC44LjgiLCJHZW9pcHVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9zaXRlLmRhdCIsIkxhc3RVcGRhdGVkIjoiIiwiRG5zSG9zdHMiOnsiMS4xLjEuMSI6IjEuMS4xLjEiLCI4LjguOC44IjoiOC44LjguOCJ9LCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1Il0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCJnZW9pcDpydSIsIjEwMC4xMDAuMC4wLzI0IiwiMTAwLjEwMC4xMDAuMC8yNCIsIjEwMC4xMTUuOTIuMC8yMyJdLCJQcm94eVNpdGVzIjpbXSwiUHJveHlJcCI6W10sIkJsb2NrU2l0ZXMiOltdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJJUElmTm9uTWF0Y2giLCJGYWtlRE5TIjoiZmFsc2UiLCJVc2VDaHVua0ZpbGVzIjoidHJ1ZSJ9",
+              "buttonText": {
+                "en": "Bypass Russia(default)",
+                "ru": "Все, кроме РФ(по умолчанию)"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiVW5ibG9jayAjOTU1NSIsIkdsb2JhbFByb3h5IjoiZmFsc2UiLCJSZW1vdGVETlNUeXBlIjoiRG9IIiwiUmVtb3RlRE5TRG9tYWluIjoiaHR0cHM6Ly8xLjEuMS4xL2Rucy1xdWVyeSIsIlJlbW90ZUROU0lQIjoiMS4xLjEuMSIsIkRvbWVzdGljRE5TVHlwZSI6IkRvSCIsIkRvbWVzdGljRE5TRG9tYWluIjoiaHR0cHM6Ly84LjguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI4LjguOC44IiwiR2VvaXB1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9pcC5kYXQiLCJHZW9zaXRldXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2Vvc2l0ZS5kYXQiLCJMYXN0VXBkYXRlZCI6IiIsIkRuc0hvc3RzIjp7IjEuMS4xLjEiOiIxLjEuMS4xIiwiOC44LjguOCI6IjguOC44LjgifSwiRGlyZWN0U2l0ZXMiOlsiZ2Vvc2l0ZTpwcml2YXRlIl0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCIxMDAuMTAwLjAuMC8yNCIsIjEwMC4xMDAuMTAwLjAvMjQiLCIxMDAuMTE1LjkyLjAvMjMiXSwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnJ1LWJsb2NrZWQiLCJnZW9zaXRlOnRpa3RvayIsImdlb3NpdGU6ZGlzY29yZCIsImdlb3NpdGU6Y2F0ZWdvcnktYWktIWNuIl0sIlByb3h5SXAiOlsiZ2VvaXA6cnUtYmxvY2tlZC1jb21tdW5pdHkiLCJnZW9pcDpyZS1maWx0ZXIiXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "Unblock only",
+                "ru": "Только заблокированные"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQWxsICM5NTU1IiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vMS4xLjEuMS9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjEuMS4xLjEiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJEb21lc3RpY0ROU0lQIjoiOC44LjguOCIsIkdlb2lwdXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb3NpdGUuZGF0IiwiTGFzdFVwZGF0ZWQiOiIiLCJEbnNIb3N0cyI6eyIxLjEuMS4xIjoiMS4xLjEuMSIsIjguOC44LjgiOiI4LjguOC44In0sIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiMTAwLjEwMC4wLjAvMjQiLCIxMDAuMTAwLjEwMC4wLzI0IiwiMTAwLjExNS45Mi4wLzIzIl0sIlByb3h5U2l0ZXMiOltdLCJQcm94eUlwIjpbXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "All requests",
+                "ru": "Все запросы"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "linux": [],
+    "macos": [],
+    "windows": [
+      {
+        "id": "happ",
+        "name": "Happ",
+        "isFeatured": true,
+        "urlScheme": "happ://add/",
+        "installationStep": {
+          "buttons": [
+            {
+              "buttonLink": "https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x86.exe",
+              "buttonText": {
+                "en": "Download",
+                "ru": "Скачать"
+              }
+            }
+          ],
+          "description": {
+            "en": "Download .exe file and install it",
+            "ru": "Скачай .exe файл и установи его"
+          }
+        },
+        "addSubscriptionStep": {
+          "description": {
+            "en": "Click the button below to add subscription",
+            "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
+          }
+        },
+        "connectAndUseStep": {
+          "description": {
+            "en": "Open the app and connect to the server",
+            "ru": "Откройте приложение и подключитесь к серверу"
+          }
+        },
+        "additionalAfterAddSubscriptionStep": {
+          "title": {
+            "en": "Add routing rules to chose from",
+            "ru": "Добавь правила маршрутизации"
+          },
+          "description": {
+            "en": "Here you can configure which traffic will go through the VPN.\n\nHow to manage profiles:\n\n - To add a new rule: Click the buttons below.\n\n - To change the active profile: Go to Settings -> Routing -> Profiles.\n\nProfile descriptions:\n\n - 'All requests' Directs all your internet traffic through the VPN.\n\n - 'Blocked only' Uses the VPN only to open blocked sites.\n\n - 'All, except RU' (Default) Directs all traffic through the VPN, except for requests to Russian resources.",
+            "ru": "Здесь вы можете настроить, какой трафик будет проходить через VPN.\n\nКак управлять профилями:\n\n - Чтобы добавить новое правило: Нажмите на кнопки ниже.\n\n - Чтобы изменить активный профиль: Перейдите в Настройки -> Маршрутизация -> Профили.\n\nОписание профилей:\n\n - 'Все запросы' Направляет весь ваш интернет-трафик через VPN.\n\n - 'Только заблокированные' Использует VPN только для открытия заблокированных сайтов.\n\n - 'Все, кроме РФ' (По умолчанию) Направляет через VPN весь трафик, кроме запросов к российским ресурсам."
+          },
+          "buttons": [
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQnlwYXNzIFJ1c3NpYSAjOTU1NSIsIkdsb2JhbFByb3h5IjoidHJ1ZSIsIlJlbW90ZUROU1R5cGUiOiJEb0giLCJSZW1vdGVETlNEb21haW4iOiJodHRwczovLzEuMS4xLjEvZG5zLXF1ZXJ5IiwiUmVtb3RlRE5TSVAiOiIxLjEuMS4xIiwiRG9tZXN0aWNETlNUeXBlIjoiRG9IIiwiRG9tZXN0aWNETlNEb21haW4iOiJodHRwczovLzguOC44LjgvZG5zLXF1ZXJ5IiwiRG9tZXN0aWNETlNJUCI6IjguOC44LjgiLCJHZW9pcHVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb2lwLmRhdCIsIkdlb3NpdGV1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9zaXRlLmRhdCIsIkxhc3RVcGRhdGVkIjoiIiwiRG5zSG9zdHMiOnsiMS4xLjEuMSI6IjEuMS4xLjEiLCI4LjguOC44IjoiOC44LjguOCJ9LCJEaXJlY3RTaXRlcyI6WyJnZW9zaXRlOnByaXZhdGUiLCJnZW9zaXRlOmNhdGVnb3J5LXJ1Il0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCJnZW9pcDpydSIsIjEwMC4xMDAuMC4wLzI0IiwiMTAwLjEwMC4xMDAuMC8yNCIsIjEwMC4xMTUuOTIuMC8yMyJdLCJQcm94eVNpdGVzIjpbXSwiUHJveHlJcCI6W10sIkJsb2NrU2l0ZXMiOltdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJJUElmTm9uTWF0Y2giLCJGYWtlRE5TIjoiZmFsc2UiLCJVc2VDaHVua0ZpbGVzIjoidHJ1ZSJ9",
+              "buttonText": {
+                "en": "Bypass Russia(default)",
+                "ru": "Все, кроме РФ(по умолчанию)"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiVW5ibG9jayAjOTU1NSIsIkdsb2JhbFByb3h5IjoiZmFsc2UiLCJSZW1vdGVETlNUeXBlIjoiRG9IIiwiUmVtb3RlRE5TRG9tYWluIjoiaHR0cHM6Ly8xLjEuMS4xL2Rucy1xdWVyeSIsIlJlbW90ZUROU0lQIjoiMS4xLjEuMSIsIkRvbWVzdGljRE5TVHlwZSI6IkRvSCIsIkRvbWVzdGljRE5TRG9tYWluIjoiaHR0cHM6Ly84LjguOC44L2Rucy1xdWVyeSIsIkRvbWVzdGljRE5TSVAiOiI4LjguOC44IiwiR2VvaXB1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcnVuZXRmcmVlZG9tL3J1c3NpYS12MnJheS1ydWxlcy1kYXQvcmVsZWFzZS9nZW9pcC5kYXQiLCJHZW9zaXRldXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2Vvc2l0ZS5kYXQiLCJMYXN0VXBkYXRlZCI6IiIsIkRuc0hvc3RzIjp7IjEuMS4xLjEiOiIxLjEuMS4xIiwiOC44LjguOCI6IjguOC44LjgifSwiRGlyZWN0U2l0ZXMiOlsiZ2Vvc2l0ZTpwcml2YXRlIl0sIkRpcmVjdElwIjpbImdlb2lwOnByaXZhdGUiLCIxMDAuMTAwLjAuMC8yNCIsIjEwMC4xMDAuMTAwLjAvMjQiLCIxMDAuMTE1LjkyLjAvMjMiXSwiUHJveHlTaXRlcyI6WyJnZW9zaXRlOnJ1LWJsb2NrZWQiLCJnZW9zaXRlOnRpa3RvayIsImdlb3NpdGU6ZGlzY29yZCIsImdlb3NpdGU6Y2F0ZWdvcnktYWktIWNuIl0sIlByb3h5SXAiOlsiZ2VvaXA6cnUtYmxvY2tlZC1jb21tdW5pdHkiLCJnZW9pcDpyZS1maWx0ZXIiXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "Unblock only",
+                "ru": "Только заблокированные"
+              }
+            },
+            {
+              "buttonLink": "happ://routing/add/eyJOYW1lIjoiQWxsICM5NTU1IiwiR2xvYmFsUHJveHkiOiJ0cnVlIiwiUmVtb3RlRE5TVHlwZSI6IkRvSCIsIlJlbW90ZUROU0RvbWFpbiI6Imh0dHBzOi8vMS4xLjEuMS9kbnMtcXVlcnkiLCJSZW1vdGVETlNJUCI6IjEuMS4xLjEiLCJEb21lc3RpY0ROU1R5cGUiOiJEb0giLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJEb21lc3RpY0ROU0lQIjoiOC44LjguOCIsIkdlb2lwdXJsIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3J1bmV0ZnJlZWRvbS9ydXNzaWEtdjJyYXktcnVsZXMtZGF0L3JlbGVhc2UvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ydW5ldGZyZWVkb20vcnVzc2lhLXYycmF5LXJ1bGVzLWRhdC9yZWxlYXNlL2dlb3NpdGUuZGF0IiwiTGFzdFVwZGF0ZWQiOiIiLCJEbnNIb3N0cyI6eyIxLjEuMS4xIjoiMS4xLjEuMSIsIjguOC44LjgiOiI4LjguOC44In0sIkRpcmVjdFNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSJdLCJEaXJlY3RJcCI6WyJnZW9pcDpwcml2YXRlIiwiMTAwLjEwMC4wLjAvMjQiLCIxMDAuMTAwLjEwMC4wLzI0IiwiMTAwLjExNS45Mi4wLzIzIl0sIlByb3h5U2l0ZXMiOltdLCJQcm94eUlwIjpbXSwiQmxvY2tTaXRlcyI6W10sIkJsb2NrSXAiOltdLCJEb21haW5TdHJhdGVneSI6IklQSWZOb25NYXRjaCIsIkZha2VETlMiOiJmYWxzZSIsIlVzZUNodW5rRmlsZXMiOiJ0cnVlIn0=",
+              "buttonText": {
+                "en": "All requests",
+                "ru": "Все запросы"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "androidTV": [],
+    "appleTV": []
+  }
+}
