@@ -39,7 +39,7 @@ services:
       retries: 3
 
   remnawave:
-    image: remnawave/backend:2
+    image: remnawave/backend:2.2.6
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
