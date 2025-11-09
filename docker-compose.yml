@@ -39,7 +39,7 @@ services:
       retries: 3
 
   remnawave:
-    image: ghcr.io/murmursh/backend:xray-latest
+    image: remnawave/backend:2.2.6
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
