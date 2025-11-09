@@ -39,9 +39,7 @@ services:
       retries: 3
 
   remnawave:
-    build:
-      context: https://github.com/murmursh/backend.git#xray-template-bs
-    image: remnawave-local-fork:latest
+    image: ghcr.io/murmursh/backend:xray-latest
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
