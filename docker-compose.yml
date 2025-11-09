@@ -38,8 +38,11 @@ services:
       timeout: 10s
       retries: 3
 
-  remnawave:
-    image: remnawave/backend:2.2.6
+remnawave:
+    build:
+      context: https://github.com/murmursh/backend.git
+      ref: xray-template-bs
+    image: remnawave-local-fork:latest
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
