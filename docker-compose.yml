@@ -40,8 +40,7 @@ services:
 
   remnawave:
     build:
-      context: https://github.com/murmursh/backend.git
-      ref: xray-template-bs
+      context: https://github.com/murmursh/backend.git#xray-template-bs
     image: remnawave-local-fork:latest
     container_name: 'remnawave'
     hostname: remnawave
