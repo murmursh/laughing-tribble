@@ -38,7 +38,7 @@ services:
       timeout: 10s
       retries: 3
 
-remnawave:
+  remnawave:
     build:
       context: https://github.com/murmursh/backend.git
       ref: xray-template-bs
