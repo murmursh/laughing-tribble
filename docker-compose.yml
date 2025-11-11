@@ -40,6 +40,7 @@ services:
 
   remnawave:
     image: ghcr.io/murmursh/backend:xray-latest
+    pull_policy: always
     container_name: 'remnawave'
     hostname: remnawave
     restart: always
