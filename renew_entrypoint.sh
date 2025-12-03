@@ -58,13 +58,15 @@ while true; do
 done
 
 # --- Initial Certificate Issuance ---
+CERT_NAME="certs"
 # Check if a certificate already exists.
 # The 'live' directory is the standard place for active certs.
-if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
-  echo "### Issuing initial certificate for $DOMAIN... ###"
+if [ ! -d "/etc/letsencrypt/live/$CERT_NAME" ]; then
+  echo "### Issuing initial certificate for $DOMAIN using name $CERT_NAME... ###"
   
   # Request the certificate using the exact parameters you specified
   certbot certonly \
+    --cert-name "$CERT_NAME" \
     --standalone \
     -d "$DOMAIN" \
     --email "test@$DOMAIN" \
@@ -76,7 +78,7 @@ if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
     
   echo "### Certificate issued successfully. ###"
 else
-  echo "### Certificate for $DOMAIN already exists. Skipping issuance. ###"
+  echo "### Certificate for $DOMAIN ($CERT_NAME) already exists. Skipping issuance. ###"
 fi
 
 # --- Automatic Renewal Loop ---
