@@ -61,7 +61,7 @@ services:
         condition: service_healthy
 
   remnawave-subscription-page:
-    image: remnawave/subscription-page:latest
+    image: remnawave/subscription-page:6.4.2
     pull_policy: always
     container_name: remnawave-subscription-page
     restart: always
