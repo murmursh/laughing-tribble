@@ -39,8 +39,8 @@
         },
         "connectAndUseStep": {
           "description": {
-            "en": "test",
-            "ru": "тест"
+            "en": "Open the app and connect to the server",
+            "ru": "Откройте приложение и подключитесь к серверу"
           }
         },
         "additionalBeforeAddSubscriptionStep": {
