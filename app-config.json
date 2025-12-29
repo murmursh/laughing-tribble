@@ -12,6 +12,50 @@
   "platforms": {
     "android": [
       {
+        "id": "new-app-android-1766993051039",
+        "name": "V2raytun",
+        "isFeatured": true,
+        "urlScheme": "",
+        "installationStep": {
+          "buttons": [
+            {
+              "buttonLink": "https://github.com/2dust/v2rayNG/releases/latest",
+              "buttonText": {
+                "en": "Download",
+                "ru": "Скачать"
+              }
+            }
+          ],
+          "description": {
+            "en": "Download .apk file and install it",
+            "ru": "Скачай .apk файл и установи его"
+          }
+        },
+        "addSubscriptionStep": {
+          "description": {
+            "en": "Follow these steps to add your subscription to the app:\n\n - Copy the Link Copy your subscription link to your device's clipboard.\n - Open the App Go to the Home (Main) page of the application.\n - Tap the \"+\" icon.\n - Select \"Import from clipboard\" from the menu.\n\n⚠️ Note: Do not click the button at the bottom of the screen.",
+            "ru": "Чтобы активировать подписку в приложении, следуйте этим простым шагам:\n\n - Скопируйте предоставленную вам ссылку на подписку в буфер обмена вашего устройства.\n - Откройте приложение и убедитесь, что вы находитесь на Главной странице.\n - Нажмите на значок «+» (обычно находится в углу экрана).\n - В появившемся меню выберите пункт «Импорт из буфера обмена».\n\n⚠️ Важно: Нажимать на кнопку, расположенную в самом низу экрана, не нужно."
+          }
+        },
+        "connectAndUseStep": {
+          "description": {
+            "en": "test",
+            "ru": "тест"
+          }
+        },
+        "additionalBeforeAddSubscriptionStep": {
+          "title": {
+            "en": "Routing files must be added before adding a subscription.",
+            "ru": "Перед добавлением подписки нужно добавть файлы маршрутизации."
+          },
+          "description": {
+            "en": "To ensure the application works correctly and the routing rules are updated, please follow these steps:\n\nStep 1: Navigate to Resource Settings\n - Launch the application on your device.\n - Open the Main Menu (usually the \"three lines\" icon in the top corner).\n - Select the Resource Files (or Asset Files) option.\nStep 2: Select the Source\n - Locate the selection field for the Geo-file source.\n - Select runetfreedom/russia-v2ray-rules-dat from the list.\nStep 3: Update Data\n - In the top-right corner of the screen, tap the cloud icon with an arrow.\n - Wait for the download and application of the new rules to complete.",
+            "ru": "Для корректной работы приложения и обновления правил маршрутизации выполните следующие действия:\n\nШаг 1: Переход в настройки ресурсов\n - Запустите приложение на вашем устройстве.\n - Откройте Главное меню (обычно иконка «три полоски» в верхнем углу).\n - Выберите пункт Файлы ресурсов.\nШаг 2: Выбор источника\n - Найдите поле выбора источника геофайлов.\n - Выберите runetfreedom/russia-v2ray-rules-dat.\nШаг 3: Обновление данных\n - В правом верхнем углу экрана нажмите на иконку облака со стрелкой.\n - Дождитесь завершения процесса скачивания и применения новых правил."
+          },
+          "buttons": []
+        }
+      },
+      {
         "id": "happ",
         "name": "Happ",
         "isFeatured": false,
@@ -40,8 +84,8 @@
         },
         "addSubscriptionStep": {
           "description": {
-            "en": "Click the button below to add subscription",
-            "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
+            "ru": "Click the button below to add subscription",
+            "en": "Нажмите кнопку ниже, чтобы добавить подписку"
           }
         },
         "connectAndUseStep": {
@@ -49,50 +93,6 @@
             "en": "Open the app and connect to the server",
             "ru": "Откройте приложение и подключитесь к серверу"
           }
-        }
-      },
-      {
-        "id": "new-app-android-1766993051039",
-        "name": "V2raytun",
-        "isFeatured": true,
-        "urlScheme": "",
-        "installationStep": {
-          "buttons": [
-            {
-              "buttonLink": "https://github.com/2dust/v2rayNG/releases/latest",
-              "buttonText": {
-                "en": "Download",
-                "ru": "Скачать"
-              }
-            }
-          ],
-          "description": {
-            "en": "Download .apk file and install it",
-            "ru": "Скачай .apk файл и установи его"
-          }
-        },
-        "addSubscriptionStep": {
-          "description": {
-            "en": "Нажмите кнопку ниже, чтобы добавить подписку",
-            "ru": "Click the button below to add subscription"
-          }
-        },
-        "connectAndUseStep": {
-          "description": {
-            "en": "test",
-            "ru": "тест"
-          }
-        },
-        "additionalBeforeAddSubscriptionStep": {
-          "title": {
-            "en": "Routing files must be added before adding a subscription.",
-            "ru": "Перед добавлением подписки нужно добавть файлы маршрутизации."
-          },
-          "description": {
-            "en": "To ensure the application works correctly and the routing rules are updated, please follow these steps:\n\nStep 1: Navigate to Resource Settings\n - Launch the application on your device.\n - Open the Main Menu (usually the \"three lines\" icon in the top corner).\n - Select the Resource Files (or Asset Files) option.\nStep 2: Select the Source\n - Locate the selection field for the Geo-file source.\n - Select runetfreedom/russia-v2ray-rules-dat from the list.\nStep 3: Update Data\n - In the top-right corner of the screen, tap the cloud icon with an arrow.\n - Wait for the download and application of the new rules to complete.",
-            "ru": "Для корректной работы приложения и обновления правил маршрутизации выполните следующие действия:\n\nШаг 1: Переход в настройки ресурсов\n - Запустите приложение на вашем устройстве.\n - Откройте Главное меню (обычно иконка «три полоски» в верхнем углу).\n - Выберите пункт Файлы ресурсов.\nШаг 2: Выбор источника\n - Найдите поле выбора источника геофайлов.\n - Выберите runetfreedom/russia-v2ray-rules-dat.\nШаг 3: Обновление данных\n - В правом верхнем углу экрана нажмите на иконку облака со стрелкой.\n - Дождитесь завершения процесса скачивания и применения новых правил."
-          },
-          "buttons": []
         }
       }
     ],
